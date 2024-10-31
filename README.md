@@ -14,9 +14,9 @@
     <strong>Hui Liu</strong>
     ·
     <strong>Huanqiang Zeng</strong>
-    .
+    ·
     <a href="https://sites.google.com/site/junhuihoushomepage/"><strong>Junhui Hou</strong></a>
-    .
+    ·
   </p>
 
   <p align="center">
