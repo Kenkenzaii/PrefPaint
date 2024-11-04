@@ -29,7 +29,7 @@
 </p>
 <br />
 
-This repository contains the pytorch implementation for the paper [PrefPaint: Aligning Image Inpainting Diffusion Model with Human Preference](https://stevenlsw.github.io/physgen/), Neurips 2024. 
+This repository contains the pytorch implementation for the paper [PrefPaint: Aligning Image Inpainting Diffusion Model with Human Preference](https://prefpaint.github.io/), Neurips 2024. 
 
 The code and instructions will be released soon!
 
