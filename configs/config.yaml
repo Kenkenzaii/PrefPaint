@@ -1,0 +1,65 @@
+!munch.Munch
+
+
+pretrained_model_name: runwayml/stable-diffusion-inpainting
+batch_size: 16
+exp_name: exp_occu7
+rl_model_update: 15
+save_interval: 800000
+max_iterations: 2000000
+l1_weight: 0.01
+gradient_accumulation_steps: 3
+training_list: train_group_all_nor
+group: False
+
+ 
+ADV_CLIP_MAX: 10.0
+ImageReward: !munch.Munch
+  mlp_dim: 1024
+  model_path: /data/kendong/Diffusions/joint-rl-diffusion/checkpoint/256_001_NOR_best.pt  #/data/kendong/Diffusions/joint-rl-diffusion/checkpoint/128_modified_vit_best.pt
+ViT: !munch.Munch
+  dropout: 0.1
+  feature_dim: 1024
+  mlp_dim: 1024
+  num_heads: 16
+
+adam_beta1: 0.9
+adam_beta2: 0.999
+adam_epsilon: 1.0e-08
+clip_range: 0.0001
+
+boundary_alpha: 0.05
+boundary_beta: 0.7
+
+V_inverse_path: ./checkpoint/V_inverse.pt
+
+
+data_base: /data/kendong/Diffusions/joint-rl-diffusion/configs/annotations_v3/data
+ddpo_loss_scale: 1
+enable_xformers_memory_efficient_attention: true
+eta: 1.0
+
+
+fix_base: false
+fix_rate: 0.7
+
+gradient_checkpointing: true
+guidance_scale: 7.0
+
+
+learning_rate: 2.0e-06
+lr_scheduler: constant
+lr_warmup_start_ratio: 1.0
+lr_warmup_steps: 1
+
+minimum_image_size: 512
+mixed_precision: bf16
+n_inference_steps: 50
+n_train_steps: 5
+noise_scheduler: DDPM
+
+resolution: 512
+root_path: /data/kendong/Diffusions/joint-rl-diffusion-copy/data/merge_4w
+save_folder: /data/kendong/Diffusions/joint-rl-diffusion/alignment_log
+use_bfloat16: false
+weight_decay: 0.01
