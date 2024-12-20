@@ -49,16 +49,16 @@ git clone https://github.com/Kenkenzaii/PrefPaint.git
 ```
 
 ### Python Environment
-To prepare the Python environment needed to run PhysGaussian, execute the following commands:
+To prepare the Python environment needed to run PrefPaint, execute the following commands:
 ```shell
 conda create -n prefpaint python=3.8
 conda activate prefpaint
 
+# By default, We use pytorch=2.0.0+cu118.
 pip install -r requirements.txt
 pip install clip@git+https://github.com/openai/CLIP.git
 
 ```
-By default, We use pytorch=2.0.0+cu118.
 
 ## Usage
 ```bash
