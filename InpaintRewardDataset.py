@@ -197,7 +197,7 @@ class InpaintRewardDatasetGroup(Dataset):
         self.worse_mask_imgs = None
         self.scores = None
         self.root_path = (
-            root_path  # '/data/kendong/Diffusions/joint-rl-diffusion/data/ade20k/merge'
+            root_path  
         )
 
         self.clip, self.preprocess = clip.load("ViT-B/32", device="cuda")

@@ -1,9 +1,6 @@
-import os
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
 import clip
-from PIL import Image
 from torch.nn import TransformerEncoder, TransformerEncoderLayer
 from torchvision import transforms 
 

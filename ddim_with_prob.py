@@ -302,7 +302,7 @@ class DDIMSchedulerCustom(SchedulerMixin, ConfigMixin):
             pred_original_sample = torch.clamp(pred_original_sample, -1, 1)
 
 
-        # 5. compute variance: "sigma_t(η)" -> see formula (16)
+        # 5. compute variance: "sigma_t(η)" 
         # σ_t = sqrt((1 − α_t−1)/(1 − α_t)) * sqrt(1 − α_t/α_t−1)
         variance = self._get_variance(timestep, prev_timestep)
         std_dev_t = eta * variance ** (0.5)
