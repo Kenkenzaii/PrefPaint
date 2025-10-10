@@ -13,8 +13,6 @@ This project implements a reward model designed for image inpainting tasks, aimi
 
 ## 🚀 Usage
 
-### 1. Clone the repository
-
 ```bash
 cd ImageReward
 In the YAML file located at `configs/imagereward_train_configs.yaml`, replace: ../Data/ with your own path
