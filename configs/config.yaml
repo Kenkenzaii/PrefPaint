@@ -16,7 +16,7 @@ group: False
 ADV_CLIP_MAX: 10.0
 ImageReward: !munch.Munch
   mlp_dim: 1024
-  model_path: /data/kendong/Diffusions/joint-rl-diffusion/checkpoint/256_001_NOR_best.pt  #/data/kendong/Diffusions/joint-rl-diffusion/checkpoint/128_modified_vit_best.pt
+  model_path: ../Data/InpaintReward.pt  
 ViT: !munch.Munch
   dropout: 0.1
   feature_dim: 1024
@@ -34,7 +34,7 @@ boundary_beta: 0.7
 V_inverse_path: ./checkpoint/V_inverse.pt
 
 
-data_base: /data/kendong/Diffusions/joint-rl-diffusion/configs/annotations_v3/data
+data_base: ../Data
 ddpo_loss_scale: 1
 enable_xformers_memory_efficient_attention: true
 eta: 1.0
@@ -59,7 +59,7 @@ n_train_steps: 5
 noise_scheduler: DDPM
 
 resolution: 512
-root_path: /data/kendong/Diffusions/joint-rl-diffusion-copy/data/merge_4w
-save_folder: /data/kendong/Diffusions/joint-rl-diffusion/alignment_log
+root_path: ../Data
+save_folder: ./alignment_log
 use_bfloat16: false
 weight_decay: 0.01
