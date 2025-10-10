@@ -40,7 +40,7 @@ This repository contains the pytorch implementation for the paper [PrefPaint: Al
 - [2024-09-26] Our paper has been accpetd by Neurips 2024!
 
 
-## TODO
+## Todo
 - [x] Release training code.
 - [x] Release inpainting model and inpaint reward model.
 - [x] Release InpaintReward training code.
