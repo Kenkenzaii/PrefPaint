@@ -39,6 +39,14 @@ This repository contains the pytorch implementation for the paper [PrefPaint: Al
 - [2024-12-16] Reinforcement Learning Code Release.
 - [2024-09-26] Our paper has been accpetd by Neurips 2024!
 
+
+## TODO
+- [x] Release training code.
+- [x] Release inpainting model and inpaint reward model.
+- [x] Release InpaintReward training code.
+- [x] Release Datasets.
+
+
 ## Setup
 
 ### Cloning the Repository
@@ -109,14 +117,6 @@ model_path = RewardModel_download(MODEL_NAME, './checkpoint')
 
 ## Testing
 For testing performance of our inpainting model, you can upload your own input on <a href="https://huggingface.co/spaces/kd5678/prefpaint"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Gradio%20Demo-Huggingface-orange"></a>. A Colab notebook <a href='https://colab.research.google.com/drive/1QLKFp0hTe37tkSNhl0oVNVqtKgnAKOxX?usp=drive_link.' style='padding-left: 0.5rem;'><img src='https://colab.research.google.com/assets/colab-badge.svg' alt='Google Colab'></a> is also provided for a quick evaluation of the inpainted results.
-
-## TODO
-
-- [x] Release training code.
-- [x] Release inpainting model and inpaint reward model.
-- [x] Release InpaintReward training code.
-- [x] Release Datasets.
-
 
 ## Acknowledgement
 Thanks for the following wonderful works: [Diffusers](https://huggingface.co/docs/diffusers/index), [ImageReward](https://github.com/THUDM/ImageReward)
