@@ -54,7 +54,7 @@ To prepare the Python environment needed to run PrefPaint, execute the following
 conda create -n prefpaint python=3.8
 conda activate prefpaint
 
-# By default, We use pytorch=2.0.0+cu118.
+# By default, we use pytorch=2.0.0+cu118.
 pip install -r requirements.txt
 pip install clip@git+https://github.com/openai/CLIP.git
 
@@ -114,7 +114,7 @@ For testing performance of our inpainting model, you can upload your own input o
 
 - [x] Release training code.
 - [x] Release inpainting model and inpaint reward model.
-- [ ] Release InpaintReward training code.
+- [x] Release InpaintReward training code.
 - [x] Release Datasets.
 
 
