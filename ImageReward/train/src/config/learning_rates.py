@@ -1,13 +1,4 @@
-'''
-@File       :   learning_rates.py
-@Time       :   2023/02/09 20:47:00
-@Auther     :   Jiazheng Xu
-@Contact    :   xjz22@mails.tsinghua.edu.cn
-@Description:   learning_rates.
 
-* Based on https://github.com/THUDM/GLM/blob/main/learning_rates.py
-'''
-"""PyTorch DataLoader for TFRecords"""
 
 import torch
 from torch.optim.lr_scheduler import _LRScheduler

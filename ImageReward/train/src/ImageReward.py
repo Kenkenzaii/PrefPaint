@@ -1,11 +1,3 @@
-'''
-@File       :   ImageReward.py
-@Time       :   2023/02/28 19:53:00
-@Auther     :   Jiazheng Xu
-@Contact    :   xjz22@mails.tsinghua.edu.cn
-@Description:   ImageReward Reward model for reward model.
-'''
-
 import os
 import torch
 import torch.nn as nn

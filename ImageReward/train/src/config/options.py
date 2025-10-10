@@ -1,10 +1,3 @@
-'''
-@File       :   options.py
-@Time       :   2023/01/09 23:01:00
-@Auther     :   Jiazheng Xu
-@Contact    :   xjz22@mails.tsinghua.edu.cn
-@Description:   config.options for project.
-'''
 
 import os
 import argparse
