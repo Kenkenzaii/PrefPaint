@@ -1,5 +1,5 @@
 import os, time, random
-os.environ['NCCL_P2P_DISABLE']='1' 
+# os.environ['NCCL_P2P_DISABLE']='2' 
 import torch
 import yaml
 import math
@@ -255,7 +255,7 @@ tensor2Image = transforms.Compose(
 cnt = 0
 current_step = 0
 num_itertaions = 0
-stack = MovingAverageStack(config.queue_length)
+# stack = MovingAverageStack(config.queue_length)
 
 
 while config.max_iterations == 0 or num_itertaions < config.max_iterations:

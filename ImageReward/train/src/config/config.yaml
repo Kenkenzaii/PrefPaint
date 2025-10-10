@@ -9,10 +9,10 @@ visual_base: visualization
 log_base: log
 
 # dataset
-data_base: /data1/kendong/joint-rl-diffusion/configs/annotations_v3/data
+data_base: /data/kendong/Diffusions/PrefPaint/Data
 image_base: images
-store_base: /data1/kendong/joint-rl-diffusion/configs/annotations_v3/
-root_path: /data1/kendong/joint-rl-diffusion/data/merge_all
+store_base: /data/kendong/Diffusions/PrefPaint/Data
+root_path: /data/kendong/Diffusions/PrefPaint/Data
 # model parameters
 BLIP:
   # size of vit model; base or large

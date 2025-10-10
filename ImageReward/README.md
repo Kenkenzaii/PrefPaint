@@ -15,6 +15,7 @@ This project implements a reward model designed for image inpainting tasks, aimi
 
 ```bash
 cd ImageReward
-In the YAML file located at `configs/imagereward_train_configs.yaml`, replace: ../Data/ with your own path
 cd train
+In the YAML file located at `src/config/config.yaml`, replace: ../Data/ with your own path
 Run bash ./scripts/train_one_node.sh
+You can monitor training progress by checking the log files in director "./log"
