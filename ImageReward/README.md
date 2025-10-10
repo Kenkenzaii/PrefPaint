@@ -6,7 +6,7 @@ This project implements a reward model designed for image inpainting tasks, aimi
 
 ## Dataset Preparation
 
-1. Download the training dataset from [this Google Drive link](https://drive.google.com/drive/folders/1A0hdSiYmGv7OMWuJGefbAMm-UJmoKsnU?usp=sharing).
+1. Download the training dataset from this [Google Drive link](https://drive.google.com/drive/folders/1A0hdSiYmGv7OMWuJGefbAMm-UJmoKsnU?usp=sharing).
 2. Place the dataset contents in the `./Data/` directory.
 
 ---
