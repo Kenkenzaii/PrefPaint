@@ -75,8 +75,8 @@ class InpaintAlignmentDataset(Dataset):
 
     def get_file(self, index):
 
-        mask = Image.open(self.masks[index] + ".png").convert('L')
-        mask_rgb = Image.open(self.mask_rgbs[index] + ".png")
+        mask = Image.open(self.masks[index] + ".jpg").convert('L')
+        mask_rgb = Image.open(self.mask_rgbs[index] + ".jpg")
         color, mask = np.array(mask_rgb).transpose(2, 0, 1), np.array(mask)
         mask = mask[None, ...]
             
@@ -163,8 +163,8 @@ class InpaintRewardDataset(Dataset):
 
     def get_file(self, index):
 
-        inpaint = Image.open(self.inpaint_imgs[index] + ".png")
-        mask_rgb = Image.open(self.mask_imgs[index] + ".png")
+        inpaint = Image.open(self.inpaint_imgs[index] + ".jpg")
+        mask_rgb = Image.open(self.mask_imgs[index] + ".jpg")
         inpaint = self.preprocess(inpaint).unsqueeze(0)
         mask_rgb = self.preprocess(mask_rgb).unsqueeze(0)
         score = torch.tensor([self.scores[index]], dtype=torch.float32)
@@ -249,13 +249,13 @@ class InpaintRewardDatasetGroup(Dataset):
 
     def get_file(self, index):
 
-        better_inpaint = Image.open(self.better_inpaint_imgs[index] + ".png")
-        better_mask = Image.open(self.better_mask_imgs[index] + ".png")
+        better_inpaint = Image.open(self.better_inpaint_imgs[index] + ".jpg")
+        better_mask = Image.open(self.better_mask_imgs[index] + ".jpg")
         better_inpaint = self.preprocess(better_inpaint).unsqueeze(0)
         better_mask = self.preprocess(better_mask).unsqueeze(0)
 
-        worse_inpaint = Image.open(self.worse_inpaint_imgs[index] + ".png")
-        worse_mask = Image.open(self.worse_mask_imgs[index] + ".png")
+        worse_inpaint = Image.open(self.worse_inpaint_imgs[index] + ".jpg")
+        worse_mask = Image.open(self.worse_mask_imgs[index] + ".jpg")
         worse_inpaint = self.preprocess(worse_inpaint).unsqueeze(0)
         worse_mask = self.preprocess(worse_mask).unsqueeze(0)
 

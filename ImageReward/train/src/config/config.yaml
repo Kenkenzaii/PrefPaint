@@ -1,0 +1,32 @@
+# ckpt/config options(static)
+blip_path: https://storage.googleapis.com/sfr-vision-language-research/BLIP/models/model_large.pth
+med_config: src/config/med_config.json
+clip_model: ViT-B/32
+
+# ckpt/logger options(dynamic)
+checkpoint_base: checkpoint
+visual_base: visualization
+log_base: log
+
+# dataset
+data_base: /data1/kendong/joint-rl-diffusion/configs/annotations_v3/data
+image_base: images
+store_base: /data1/kendong/joint-rl-diffusion/configs/annotations_v3/
+root_path: /data1/kendong/joint-rl-diffusion/data/merge_all
+# model parameters
+BLIP:
+  # size of vit model; base or large
+  vit: 'large'
+  image_size: 256
+
+ImageReward:
+  mlp_dim: 1024
+  return_last_feature: True
+  
+
+ViT:
+  feature_dim: 1024
+  num_heads: 16
+  mlp_dim: 1024
+  dropout: 0.1
+

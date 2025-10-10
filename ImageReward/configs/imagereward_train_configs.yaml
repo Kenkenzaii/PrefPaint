@@ -1,0 +1,73 @@
+!munch.Munch
+
+
+pretrained_model_name: runwayml/stable-diffusion-inpainting
+batch_size: 16
+exp_name: exp_occu
+rl_model_update: 15
+save_interval: 160000
+max_iterations: 2000000
+l1_weight: 0.01
+gradient_accumulation_steps: 3
+queue_length: 200
+group: False
+
+ 
+ADV_CLIP_MAX: 10.0
+ImageReward: !munch.Munch
+  mlp_dim: 1024
+  model_path: ../Data/InpaintReward.pt  
+ViT: !munch.Munch
+  dropout: 0.1
+  feature_dim: 1024
+  mlp_dim: 1024
+  num_heads: 16
+
+adam_beta1: 0.9
+adam_beta2: 0.999
+adam_epsilon: 1.0e-08
+clip_range: 0.0001
+
+boundary_alpha: 0.12
+boundary_beta: 0.8
+boundary_theta: 0.85
+V_inverse_path: ../checkpoint/V_inverse.pt
+
+
+data_base: ../Data
+ddpo_loss_scale: 1
+enable_xformers_memory_efficient_attention: true
+eta: 1.0
+
+
+fix_base: false
+fix_rate: 0.7
+
+gradient_checkpointing: true
+guidance_scale: 7.0
+image_base: images
+image_reward_tuning: true
+
+learning_rate: 2.0e-06
+lr_scheduler: constant
+lr_warmup_start_ratio: 1.0
+lr_warmup_steps: 1
+
+minimum_image_size: 512
+mixed_precision: bf16
+n_inference_steps: 50
+n_train_steps: 5
+noise_scheduler: DDPM
+
+resolution: 512
+root_path: ../Data/merge_4w
+save_folder: ./Data/alignment_log
+
+skin_tone_diversity_sp_tuning: false
+spatial_unidet_tuning: false
+store_base: ../Data
+train_cfg: true
+use_bfloat16: false
+use_ema: false
+use_pretrain_dataset: false
+weight_decay: 0.01

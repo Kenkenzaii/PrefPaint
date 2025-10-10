@@ -30,7 +30,7 @@
 <br />
 
 This repository contains the pytorch implementation for the paper [PrefPaint: Aligning Image Inpainting Diffusion Model with Human Preference](https://prefpaint.github.io/), Neurips 2024. 
-![teaser.png](assets/teaser.png)
+![teaser.jpg](assets/teaser.jpg)
 
 
 ## News
@@ -69,20 +69,26 @@ from diffusers import AutoPipelineForInpainting
 
 pipe = AutoPipelineForInpainting.from_pretrained('kd5678/prefpaint-v1.0').to("cuda")
 
-color_path = './examples/image.png'
-mask_path = './example/mask.png'
+color_path = './examples/image.jpg'
+mask_path = './example/mask.jpg'
 os.makedirs('results', exist_ok=True)
 
 image, mask = Image.open(color_path), Image.open(mask_path).convert('L')
 # You can provide your prompt here.
 prompt = ""
 result = pipe(prompt=prompt, image=image, mask_image=mask, eta=1.0).images[0]            
-result.save('./results/result.png')
+result.save('./results/result.jpg')
 ```
+## Training the inpaining reward model
+If you want to train your inpainting reward model, please follow these steps:
+1. Prepare Datasets. Please download the training dataset from this [Google Drive link](https://drive.google.com/drive/folders/1A0hdSiYmGv7OMWuJGefbAMm-UJmoKsnU?usp=sharing.).
+2. Modify the path in the config files ("configs/imagereward_train_configs.yaml").
+3. Follow the steps in the [ImageReward/README.md](./ImageReward/README.md)
 
-## Training
+
+## Training the inpainting model
 If you want to train your inpainting model, please follow these steps:
-1. Prepare Datasets. We will release our dataset soon.
+1. Prepare Datasets. Please download the training dataset from this [Google Drive link](https://drive.google.com/drive/folders/1A0hdSiYmGv7OMWuJGefbAMm-UJmoKsnU?usp=sharing.).
 2. Download the inpaint reward model.
 ```bash
 import os
@@ -108,10 +114,9 @@ For testing performance of our inpainting model, you can upload your own input o
 
 - [x] Release training code.
 - [x] Release inpainting model and inpaint reward model.
-- [ ] Config file guidelines.
 - [ ] Release InpaintReward training code.
-- [ ] Release Datasets.
-- [ ] Add more pretrained models.
+- [x] Release Datasets.
+
 
 ## Acknowledgement
 Thanks for the following wonderful works: [Diffusers](https://huggingface.co/docs/diffusers/index), [ImageReward](https://github.com/THUDM/ImageReward)
