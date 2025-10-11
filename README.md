@@ -90,7 +90,7 @@ result.save('./results/result.jpg')
 ## Training the inpaining reward model
 If you want to train your inpainting reward model, please follow these steps:
 1. Prepare Datasets. Please download the training dataset from this [Google Drive link](https://drive.google.com/drive/folders/1A0hdSiYmGv7OMWuJGefbAMm-UJmoKsnU?usp=sharing.).
-2. Modify the path in the config files ("configs/imagereward_train_configs.yaml").
+2. Modify the path in the config files (``configs/imagereward_train_configs.yaml``).
 3. Follow the steps in the [ImageReward/README.md](./ImageReward/README.md)
 
 
