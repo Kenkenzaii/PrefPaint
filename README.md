@@ -113,7 +113,7 @@ MODEL_NAME= 'https://huggingface.co/kd5678/prefpaintReward/blob/main/prefpaintRe
 
 model_path = RewardModel_download(MODEL_NAME, './checkpoint')
 ```
-3. Run "bash train.sh" or "accelerate launch train_inpainting_model.py".
+3. Run ``bash train.sh`` or ``accelerate launch train_inpainting_model.py``.
 
 ## Testing
 For testing performance of our inpainting model, you can upload your own input on <a href="https://huggingface.co/spaces/kd5678/prefpaint"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Gradio%20Demo-Huggingface-orange"></a>. A Colab notebook <a href='https://colab.research.google.com/drive/1QLKFp0hTe37tkSNhl0oVNVqtKgnAKOxX?usp=drive_link.' style='padding-left: 0.5rem;'><img src='https://colab.research.google.com/assets/colab-badge.svg' alt='Google Colab'></a> is also provided for a quick evaluation of the inpainted results.
