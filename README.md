@@ -30,7 +30,7 @@
 <br />
 
 This repository contains the pytorch implementation for the paper [PrefPaint: Aligning Image Inpainting Diffusion Model with Human Preference](https://prefpaint.github.io/), Neurips 2024. 
-![teaser.jpg](assets/teaser.jpg)
+![teaser.png](assets/teaser.png)
 
 
 ## News
