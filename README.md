@@ -124,9 +124,11 @@ Thanks for the following wonderful works: [Diffusers](https://huggingface.co/doc
 ## Citation
 ```
 @article{liu2024prefpaint,
-  title={PrefPaint: Aligning Image Inpainting Diffusion Model with Human Preference},
+  title={Prefpaint: Aligning image inpainting diffusion model with human preference},
   author={Liu, Kendong and Zhu, Zhiyu and Li, Chuanhao and Liu, Hui and Zeng, Huanqiang and Hou, Junhui},
-  journal={arXiv preprint arXiv:2410.21966},
+  journal={Advances in Neural Information Processing Systems},
+  volume={37},
+  pages={30554--30589},
   year={2024}
 }
 ```
