@@ -10,7 +10,7 @@ max_iterations: 2000000
 l1_weight: 0.01
 gradient_accumulation_steps: 3
 training_list: train_group_all_nor
-group: False
+group: True
 
  
 ADV_CLIP_MAX: 10.0
